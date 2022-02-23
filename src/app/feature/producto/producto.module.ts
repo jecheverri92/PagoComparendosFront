@@ -18,7 +18,7 @@ import { ProductoService } from './shared/service/producto.service';
   ],
   imports: [
     ProductoRoutingModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [ProductoService]
 })

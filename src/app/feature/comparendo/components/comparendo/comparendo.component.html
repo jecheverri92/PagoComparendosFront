@@ -1,0 +1,6 @@
+<div class="container">
+    <a *ngFor="let item of serviciosComparendoItems" [routerLink]="item.url" routerLinkActive="active">{{item.nombre}}</a>
+
+    <router-outlet></router-outlet>
+</div>
+

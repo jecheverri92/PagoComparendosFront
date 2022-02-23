@@ -1,0 +1,24 @@
+table {
+    width: 100%;
+  }
+
+  mat-form-field.mat-form-field {
+    width: 100%;
+  }
+
+
+  section {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  button {
+    margin-top: 0.3em;
+    padding: 1em 0;
+    line-height: 1.125;
+  }
+  .material-icons{
+    padding: 1em;
+  }
+  .material-icons.green { color: #19af2d; }
+  .material-icons.yellow { color: #ffd900; }

@@ -1,0 +1,81 @@
+
+<div class="container">
+    <mat-card>
+        <h2>Consultar Comparendos</h2>
+        <form class="buscar-form">
+        <div class="row justify-content-md-center" style="font-size: 12px">
+            <div class="col col-10">
+                    <mat-form-field class="example-full-width" appearance="outline" class="mr-1">
+                      <mat-label>Identificacion Infractor</mat-label>
+                      <input matInput placeholder="Numero de indentificacion del infractor" name="identificacionInfractor" [(ngModel)]="identificacionInfractor">
+                    </mat-form-field>     
+            </div>
+            <div class="col col-2">
+                <button mat-raised-button color="primary" (click)="buscarPorInfractor()">Buscar</button>
+            </div>
+        </div>
+    </form>
+   
+    <div class="row">
+        <div class="col-12">
+            
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="dataSource.data.length > 0">
+    
+                    <!--- Note that these columns can be defined in any order.
+                          The actual rendered columns are set as a property on the row definition" -->
+                  
+                    <!-- Position Column -->
+                    <ng-container matColumnDef="numeroComparendo">
+                      <th mat-header-cell *matHeaderCellDef> No. Comparendo </th>
+                      <td mat-cell *matCellDef="let element"> {{element.numeroComparendo}} </td>
+                    </ng-container>
+                  
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="identificacionInfractor">
+                      <th mat-header-cell *matHeaderCellDef> Id Infractor </th>
+                      <td mat-cell *matCellDef="let element"> {{element.identificacionInfractor}} </td>
+                    </ng-container>
+                  
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="tipoInfraccion">
+                      <th mat-header-cell *matHeaderCellDef> Tipo infraccion </th>
+                      <td mat-cell *matCellDef="let element"> {{element.tipoInfraccion}} </td>
+                    </ng-container>
+                  
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="fechaComparendo">
+                      <th mat-header-cell *matHeaderCellDef> Fecha Comparendo </th>
+                      <td mat-cell *matCellDef="let element"> {{element.fechaComparendo}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="valorComparendo">
+                        <th mat-header-cell *matHeaderCellDef> Valor Comparendo </th>
+                        <td mat-cell *matCellDef="let element"> {{element.valorComparendo | currency}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="acciones">
+                        <th mat-header-cell *matHeaderCellDef></th>
+                        <td mat-cell *matCellDef="let element">
+                            <a (click)="openDialogCurso(element)">
+                                <mat-icon class="yellow" matTooltip="Registrar Asistencia al curso">school</mat-icon>
+                            </a>
+                            <a (click)="openDialogPago(element)">
+                                <mat-icon class="green" matTooltip="Pagar Comparendo">payments</mat-icon>
+                            </a>
+                            
+                        </td>
+                    </ng-container>
+                  
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    <tr class="mat-row" *matNoDataRow>
+                        <td class="mat-cell" colspan="9999">
+                          No data matching the filter
+                        </td>
+                      </tr>
+                    
+                  </table>
+                  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" *ngIf="dataSource.data.length > 0"></mat-paginator>
+            
+        </div>
+    </div>
+</mat-card>
+</div>
