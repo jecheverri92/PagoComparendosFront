@@ -1,4 +1,5 @@
 export class Comparendo {
+  static Comparendo: Comparendo;
 
     static unComparendo(obj: Object){
         return new Comparendo(

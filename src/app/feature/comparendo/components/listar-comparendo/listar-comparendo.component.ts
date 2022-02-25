@@ -31,7 +31,7 @@ export class ListarComparendoComponent implements OnInit {
 
   constructor(protected comparendoService: ComparendoService, 
     private asistenciaCursoService: AsistenciaCursoService,
-    private dialog: MatDialog,
+    public  dialog: MatDialog,
     private datepipe: DatePipe) { 
   }
 

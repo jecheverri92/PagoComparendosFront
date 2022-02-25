@@ -6,7 +6,7 @@ import { ComparendoComponent } from './components/comparendo/comparendo.componen
 import { ComparendoRoutingModule } from './comparendo-routing.module';
 import { MaterialModule } from 'src/app/material/material.module';
 import { RegistrarComparendoComponent } from './components/registrar-comparendo/registrar-comparendo.component';
-import {DatePipe} from '@angular/common';
+import { DatePipe } from '@angular/common';
 
 
 
@@ -21,6 +21,6 @@ import {DatePipe} from '@angular/common';
     ComparendoRoutingModule,
     MaterialModule
   ],
-  providers: [ComparendoService, DatePipe]
+  providers: [ComparendoService, DatePipe],
 })
 export class ComparendoModule { }

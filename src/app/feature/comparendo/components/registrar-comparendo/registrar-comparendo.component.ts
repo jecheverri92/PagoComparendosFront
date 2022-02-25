@@ -23,13 +23,13 @@ export class RegistrarComparendoComponent implements OnInit {
 
   myDatepipe!: any;
 
-  constructor(private _fb: FormBuilder,
+  constructor(private fb: FormBuilder,
               private comparendoService: ComparendoService,
               private datepipe: DatePipe){
   }
 
   ngOnInit(): void {
-    this.reactiveForm = this._fb.group({
+    this.reactiveForm = this.fb.group({
       numeroComparendo:[this.registroComparendo.numeroComparendo,[Validators.required, Validators.minLength(4), Validators.maxLength(10), Validators.pattern("^[0-9]*$")]],
       identificacionInfractor:[this.registroComparendo.identificacionInfractor,[Validators.required, Validators.maxLength(30)]],
       tipoInfraccion:[this.registroComparendo.tipoInfraccion,[Validators.required]],
@@ -69,7 +69,6 @@ export class RegistrarComparendoComponent implements OnInit {
     
 
   submitForm(){
-    console.log(this.reactiveForm);
     this.registrarComparendo(this.registroComparendo);
   }
 

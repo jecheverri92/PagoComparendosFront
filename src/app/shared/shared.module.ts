@@ -29,7 +29,8 @@ import { MaterialModule } from '../material/material.module';
     MensajeErrorCamposSubmitDirective,
     ReactiveFormsModule,
     FormsModule,
-    TrackByPipe
+    TrackByPipe,
+    MaterialModule
   ]
 })
 export class SharedModule { }
