@@ -7,15 +7,14 @@
             <div class="col col-10">
                     <mat-form-field class="example-full-width" appearance="outline" class="mr-1">
                       <mat-label>Identificacion Infractor</mat-label>
-                      <input matInput placeholder="Numero de indentificacion del infractor" name="identificacionInfractor" [(ngModel)]="identificacionInfractor">
+                      <input id="inputBuscarPorInfractor" matInput placeholder="Numero de indentificacion del infractor" name="identificacionInfractor" [(ngModel)]="identificacionInfractor">
                     </mat-form-field>     
             </div>
             <div class="col col-2">
-                <button mat-raised-button color="primary" (click)="buscarPorInfractor()">Buscar</button>
+                <button id="buttonBuscarComparendo" mat-raised-button color="primary" (click)="buscarPorInfractor()">Buscar</button>
             </div>
         </div>
     </form>
-   
     <div class="row">
         <div class="col-12">
             

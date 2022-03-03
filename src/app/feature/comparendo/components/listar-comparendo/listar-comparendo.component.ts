@@ -64,7 +64,6 @@ export class ListarComparendoComponent implements OnInit {
           {...comparendo,
           valorPagado:comparendo.valorComparendo}
         )];
-        console.log(pagoComparendo)
         this.comparendoService.pagarComparendos(pagoComparendo).subscribe(data =>{      
           console.log(data);
         });

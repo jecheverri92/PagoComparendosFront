@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-//Material
+// Material
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
@@ -30,10 +30,10 @@ const MaterialComponets = [
   MatPaginatorModule,
   MatTooltipModule,
   MatDialogModule
-]
+];
 
 @NgModule({
   imports: [MaterialComponets],
-  exports:[MaterialComponets]
+  exports: [MaterialComponets]
 })
 export class MaterialModule { }

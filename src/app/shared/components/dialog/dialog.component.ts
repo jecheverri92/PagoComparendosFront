@@ -10,7 +10,7 @@ export class DialogComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<DialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public mensaje:string
+    @Inject(MAT_DIALOG_DATA) public mensaje: string
   ) { }
 
   ngOnInit(): void {

@@ -19,7 +19,7 @@ import { MaterialModule } from '../material/material.module';
     TrackByPipe,
     DialogComponent
   ],
-  entryComponents:[DialogComponent],
+  entryComponents: [DialogComponent],
   imports: [ReactiveFormsModule, FormsModule, MaterialModule],
   exports: [
     CommonModule,
